@@ -1,0 +1,18 @@
+{
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^4.21.1",
+    "mongoose": "^8.8.2"
+  },
+  "name": "backend-project-01",
+  "description": "This is my first backend project, where I'll build a website inspired by Airbnb. The project will include core backend features like user authentication, property listings, and booking management.",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
