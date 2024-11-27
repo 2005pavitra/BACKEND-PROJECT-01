@@ -12,7 +12,10 @@ const listingSchema = new Schema(
       type: String,
       // required: true,
       trim: true,
-      maxlength: 500,
+      // maxlength: 500,
+    },
+    price:{
+      type:Number,
     },
     images: {
       type: String,
