@@ -1,85 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #121212;
-            color: #e0e0e0;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        h3 {
-            margin-top: 20px;
-            color: #fff;
-        }
-
-        form {
-            margin: 20px 0;
-        }
-
-        button {
-            padding: 10px 20px;
-            background-color: #1e88e5;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 16px;
-        }
-
-        button:hover {
-            background-color: #1565c0;
-        }
-
-        div {
-            margin-top: 20px;
-            width: 80%;
-            background: #1e1e1e;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-
-        li {
-            list-style: none;
-            padding: 10px;
-            border-bottom: 1px solid #333;
-        }
-
-        li:last-child {
-            border-bottom: none;
-        }
-
-        a {
-            text-decoration: none;
-            color: #42a5f5;
-            font-weight: bold;
-        }
-
-        a:hover {
-            text-decoration: underline;
-            color: #90caf9;
-        }
-    </style>
-</head>
+<% layout("layouts/boilerplate") -%>
 <body>
     <h3>All Listings</h3>
-    <form action="/listings/new" method="GET">
+    <!-- <form action="/listings/new" method="GET">
         <button>Create new list</button>
-    </form>
+    </form> -->
     <div>
         <%for (let listing of allListing){%>
             <li><a href="/listings/<%= listing._id%>"><b><%=listing.title%></b></a></li>
         <%}%>
     </div>
 </body>
-</html>
 

@@ -4,7 +4,8 @@ const mongoose = require("mongoose");
 const PORT = 8000;
 const Listing = require("./models/listing");
 const path = require("path");
-const methodOverride = require("method-override")
+const methodOverride = require("method-override");
+const ejsMate = require("ejs-mate");
 
 
 const MONGO_URL = "mongodb://127.0.0.1:27017/backend_project_01";
@@ -22,7 +23,9 @@ async function main() {
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
 app.use(express.urlencoded({ extended: true }));
-app.use(methodOverride("_method"))
+app.use(methodOverride("_method"));
+app.use(express.static(path.join(__dirname,"/public")))
+app.engine('ejs', ejsMate);
 // app.get("/listing", async(req,res) =>{
 //     const sampleListing = new Listing({
 //         title:"My new Villa",

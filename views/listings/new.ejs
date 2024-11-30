@@ -1,53 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Create a New Listing</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #1e1e1e;
-      color:#fff;
-      padding: 20px;
-      max-width: 600px;
-      margin: auto;
-    }
-    h2 {
-      text-align: center;
-    }
-    form {
-      background: #2e2e2e;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
-    label {
-      display: block;
-      margin-bottom: 8px;
-      font-weight: bold;
-    }
-    input, textarea, button {
-        background-color: #1e1e1e;
-        color: #ccc;
-      width: 100%;
-      padding: 10px;
-      margin-bottom: 15px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      font-size: 14px;
-    }
-    button {
-      background-color: #007BFF;
-      color: white;
-      border: none;
-      cursor: pointer;
-    }
-    button:hover {
-      background-color: #0056b3;
-    }
-  </style>
-</head>
+<% layout("layouts/boilerplate") -%>
+
 <body>
   <h2>Create a New Listing</h2>
   <form action="/listings" method="POST">
