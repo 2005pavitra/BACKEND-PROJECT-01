@@ -1,5 +1,9 @@
-.navbar{
-    height: 5rem;
+ body{
+    font-family: "Plus Jakarta Sans", sans-serif  !important;
+ }
+ 
+ .navbar{
+   padding: 12px;
 }
 
 .navbar-brand{
@@ -11,3 +15,97 @@
         font-size: 2rem;
     }
 }
+
+footer {
+    background: linear-gradient(135deg, #2d3436, #636e72); /* Gradient background */
+    color: #ffffff; /* White text color */
+    padding: 20px 10px; /* Padding for spacing */
+    font-family: Arial, sans-serif; /* Clean font */
+}
+
+.f-info {
+    display: flex; /* Flexbox for alignment */
+    justify-content: space-between; /* Space out items */
+    align-items: center; /* Center items vertically */
+    flex-wrap: wrap; /* Allow wrapping on small screens */
+    max-width: 1200px; /* Limit width for larger screens */
+    margin: 0 auto; /* Center align the footer content */
+}
+
+.f-info-socials i {
+    font-size: 1.5rem; /* Increase icon size */
+    margin: 0 10px; /* Space between icons */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+.f-info-socials i:hover {
+    transform: scale(1.2); /* Slightly enlarge icons on hover */
+    color: #74b9ff; /* Add a hover color */
+}
+
+.f-info-links a {
+    color: #ffffff; /* White text for links */
+    text-decoration: none; /* Remove underline */
+    margin: 0 10px; /* Space between links */
+    font-size: 0.9rem; /* Slightly smaller text */
+    transition: color 0.3s ease; /* Smooth color change */
+}
+
+.f-info-links a:hover {
+    color: #74b9ff; /* Light blue hover color */
+}
+
+.f-info > div {
+    margin: 10px 0; /* Add spacing between items for smaller screens */
+    text-align: center; /* Center align on smaller screens */
+}
+
+@media (max-width: 768px) {
+    .f-info {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+    }
+}
+
+
+.card{
+    /* background-color: red !important; */
+    border:none !important;
+    padding: 1.3rem !important;
+    margin-bottom: 12px !important;
+
+    img{
+        /* background-color: red !important; */
+        border: none !important;
+        border-radius: 8px !important;
+        width: 100% !important;
+
+        :hover{
+            transform: scale(1.15) !m;
+        }
+    }
+
+    .card-text{
+        text-align: center !important;
+    }
+
+    
+}
+
+a{
+    /* font-weight: bold; */
+    text-align: center;
+    text-decoration: none !important;
+}
+
+.card-img-overlay{
+    opacity: 0 !important;
+
+    
+}
+.card-img-overlay:hover{
+    opacity: 0.6 !important;
+
+    
+}
+
