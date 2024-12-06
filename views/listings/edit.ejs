@@ -9,7 +9,7 @@
             <h1 class="text-center">Edit Listing</h1>
           </div>
           <div class="card-body">
-            <form action="/listings/<%= listing._id %>?_method=PUT" method="POST">
+            <form action="/listings/<%= listing._id %>?_method=PUT" method="POST" novalidate class="needs-validation">
               <!-- Title Input -->
               <div class="form-group mb-3">
                 <label for="title" class="form-label">Title</label>
@@ -21,6 +21,9 @@
                   class="form-control"
                   required
                 />
+                <div class="valid-feedback">Title looks good</div>
+                <div class="invalid-feedback">Please enter title</div>
+              
               </div>
 
               <!-- Description Input -->
@@ -47,6 +50,8 @@
                   class="form-control"
                   required
                 />
+                <div class="invalid-feedback">Invalid Price</div>
+             
               </div>
 
               <!-- Location Input -->
@@ -60,6 +65,9 @@
                   class="form-control"
                   required
                 />
+                <div class="invalid-feedback">Invalid Location</div>
+                <div class="valid-feedback">Done</div>
+              
               </div>
 
               <!-- Submit Button -->

@@ -9,7 +9,7 @@
             <h2 class="text-center">Create a New Listing</h2>
           </div>
           <div class="card-body">
-            <form action="/listings" method="POST">
+            <form action="/listings" method="POST" novalidate class="needs-validation">
               <!-- List Name Input -->
               <div class="mb-3">
                 <label for="title" class="form-label">List Name:</label>
@@ -21,6 +21,8 @@
                   class="form-control"
                   required
                 />
+                <div class="valid-feedback">Title looks good</div>
+                <div class="invalid-feedback">Please enter title</div>
               </div>
 
               <!-- Description Input -->
@@ -32,6 +34,7 @@
                   placeholder="Enter list description"
                   class="form-control"
                   rows="4"
+                  required
                 ></textarea>
               </div>
 
@@ -45,6 +48,7 @@
                   placeholder="Enter image URL"
                   class="form-control"
                 />
+                <div class="invalid-feedback">Enter valid URL</div>
               </div>
 
               <!-- Price Input -->
@@ -58,7 +62,9 @@
                   class="form-control"
                   min="0"
                   step="0.01"
+                  required
                 />
+                <div class="invalid-feedback">Invalid Price</div>
               </div>
 
               <!-- Location Input -->
@@ -70,7 +76,10 @@
                   name="listing[location]"
                   placeholder="Enter location"
                   class="form-control"
+                  required
                 />
+                <div class="invalid-feedback">Invalid Location</div>
+                <div class="valid-feedback">Done</div>
               </div>
 
               <!-- Country Input -->
@@ -82,7 +91,9 @@
                   name="listing[country]"
                   placeholder="Enter country"
                   class="form-control"
+                  required
                 />
+                <div class="invalid-feedback">Invalid Country name</div>
               </div>
 
               <!-- Submit Button -->
